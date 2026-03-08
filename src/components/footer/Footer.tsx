@@ -47,17 +47,17 @@ const PRIVACY_BAR_LINKS = [
 const SOCIAL = [
     {
         label: "LinkedIn",
-        href: "https://linkedin.com/company/ravadotech",
+        href: "https://linkedin.com/",
         Icon: Linkedin,
     },
     {
         label: "X",
-        href: "https://x.com/ravadotech",
+        href: "https://x.com/",
         Icon: XLogo,
     },
     {
         label: "YouTube",
-        href: "https://youtube.com/@ravadotech",
+        href: "https://youtube.com/",
         Icon: Youtube,
     },
 ];
@@ -157,7 +157,7 @@ export default function Footer() {
                 <hr className="border-white/10" />
 
                 {/* PRIVACY BAR */}
-                <div className="flex flex-wrap gap-x-4 gap-y-2 items-center">
+                {/* <div className="flex flex-wrap gap-x-4 gap-y-2 items-center">
                     {PRIVACY_BAR_LINKS.map((l, i) => (
                         <span key={l.href} className="flex items-center gap-4">
                             <Link
@@ -171,7 +171,7 @@ export default function Footer() {
                             )}
                         </span>
                     ))}
-                </div>
+                </div> */}
 
                 {/* BOTTOM ROW — copyright + socials */}
                 <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
