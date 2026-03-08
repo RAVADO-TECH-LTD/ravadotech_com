@@ -29,7 +29,7 @@ export default function Hero() {
                         <h1 className="text-[clamp(4.5rem,11vw,10rem)] font-normal leading-[0.95] tracking-tight text-black">
                             <span className="whitespace-nowrap">Useful by</span><br />design.
                         </h1>
-                        <p className="text-[clamp(1rem,2vw,1.25rem)] leading-relaxed text-black/75 max-w-sm">
+                        <p className="text-[clamp(1rem,2vw,1.25rem)] leading-relaxed text-black max-w-sm">
                             Modern, high-quality mobile apps for real users.
                         </p>
                     </div>
@@ -52,10 +52,10 @@ export default function Hero() {
             {/* Scroll-down indicator */}
             <div className="absolute bottom-6 left-1/2 z-10 -translate-x-1/2 animate-bounce">
                 <Image
-                    src="https://res.cloudinary.com/destej60y/image/upload/v1770937287/scroll_apbrab.png"
+                    src="https://res.cloudinary.com/destej60y/image/upload/q_auto,f_auto/v1770937287/scroll_apbrab.png"
                     alt="Scroll down"
-                    width={40}
-                    height={40}
+                    width={120}
+                    height={160}
                     className="h-16 w-auto object-contain opacity-80"
                 />
             </div>
