@@ -45,10 +45,10 @@ export default function ContactPage() {
                                 Email
                             </span>
                             <a
-                                href="mailto:support@ravadotech.com"
+                                href="mailto:office@ravadotech.com"
                                 className="mt-1 inline-block rounded-full bg-white px-8 py-3 text-base font-bold text-black transition-opacity hover:opacity-75"
                             >
-                                support@ravadotech.com
+                                office@ravadotech.com
                             </a>
                         </div>
                     </div>
