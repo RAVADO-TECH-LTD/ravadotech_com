@@ -1,0 +1,46 @@
+.section {
+  background-color: #00e5ff;
+}
+
+.sectionPurple {
+  background-color: #a000ff;
+}
+
+.sectionGreen {
+  background-color: #96ff70;
+}
+
+.sectionOrange {
+  background-color: #fe8744;
+}
+
+.sectionYellow {
+  background-color: #feff61;
+}
+
+.sectionNeonGreen {
+  background-color: #7ee8fc;
+}
+
+.screenshotContainer {
+  width: min(85vw, 1200px);
+}
+
+.gridOverlay {
+  background-image:
+    linear-gradient(
+      to right,
+      rgba(255, 255, 255, 0.4) 2px,
+      transparent 2px
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.4) 2px,
+      transparent 2px
+    );
+  background-size: 60px 60px;
+}
+
+.imageWrap {
+  aspect-ratio: 16 / 10;
+}

@@ -4,11 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
-const NAV_LINKS = [
-    { label: "Privacy Policy", href: "/privacy-policy" },
-    { label: "Terms of Service", href: "/terms-of-service" },
-    { label: "Contact", href: "/contact" },
-];
+const PRIMARY_CTA = { label: "Get Started", href: "/contact" } as const;
 
 export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
@@ -24,7 +20,9 @@ export default function Navbar() {
     // but lock body scroll when menu is open
     useEffect(() => {
         document.body.style.overflow = menuOpen ? "hidden" : "";
-        return () => { document.body.style.overflow = ""; };
+        return () => {
+            document.body.style.overflow = "";
+        };
     }, [menuOpen]);
 
     return (
@@ -43,24 +41,18 @@ export default function Navbar() {
                         className="h-11 w-auto object-contain"
                         priority
                     />
-                    <span className="text-lg tracking-wide text-black">
+                    <span className="text-2xl font-semibold tracking-wide text-black sm:text-3xl">
                         Ravado Tech
                     </span>
                 </Link>
 
-                {/* Desktop links */}
-                <ul className="hidden items-center gap-10 md:flex">
-                    {NAV_LINKS.map((link) => (
-                        <li key={link.href}>
-                            <Link
-                                href={link.href}
-                                className="text-base font-semibold text-black transition-opacity hover:opacity-60"
-                            >
-                                {link.label}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
+                {/* Desktop CTA */}
+                <Link
+                    href={PRIMARY_CTA.href}
+                    className="hidden rounded-full bg-black px-7 py-3 text-base font-bold text-white shadow-sm transition-opacity hover:opacity-80 md:inline-flex"
+                >
+                    {PRIMARY_CTA.label}
+                </Link>
 
                 {/* Mobile hamburger */}
                 <button
@@ -90,17 +82,15 @@ export default function Navbar() {
                     }`}
             >
                 <ul className="flex flex-col px-6 py-4">
-                    {NAV_LINKS.map((link) => (
-                        <li key={link.href}>
-                            <Link
-                                href={link.href}
-                                className="block py-3 text-base text-black transition-opacity hover:opacity-60"
-                                onClick={() => setMenuOpen(false)}
-                            >
-                                {link.label}
-                            </Link>
-                        </li>
-                    ))}
+                    <li>
+                        <Link
+                            href={PRIMARY_CTA.href}
+                            className="mt-2 inline-flex w-full items-center justify-center rounded-full bg-black px-7 py-3 text-base font-bold text-white shadow-sm transition-opacity hover:opacity-80"
+                            onClick={() => setMenuOpen(false)}
+                        >
+                            {PRIMARY_CTA.label}
+                        </Link>
+                    </li>
                 </ul>
             </div>
         </header>
