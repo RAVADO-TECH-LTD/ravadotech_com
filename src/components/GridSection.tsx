@@ -174,7 +174,7 @@ export default function GridSection() {
 
                     <div className={`mt-10 ${styles.screenshotContainer}`}>
                         <Image
-                            src="https://res.cloudinary.com/destej60y/image/upload/v1778105434/Screenshot_2026-05-07_001008_eypphm.png"
+                            src="https://res.cloudinary.com/destej60y/image/upload/v1778179693/Screenshot_2026-05-07_204741_ekyvgy.png"
                             alt="Recent Dashboard Screenshot"
                             width={2200}
                             height={1400}
