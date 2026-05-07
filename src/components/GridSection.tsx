@@ -3,6 +3,39 @@ import RemoteLottie from "./RemoteLottie";
 import styles from "./GridSection.module.css";
 import { TELEGRAM_CONTACT, WHATSAPP_CONTACT } from "@/lib/contact";
 
+const PUBLISHED_APPS = [
+    {
+        name: "KeepPlay",
+        imageSrc:
+            "https://res.cloudinary.com/destej60y/image/upload/v1778157200/app2_zrdwbd.webp",
+        href: "https://play.google.com/store/apps/details?id=com.keepplayengine.loyaltyapp",
+    },
+    {
+        name: "Dragon Silence",
+        imageSrc:
+            "https://res.cloudinary.com/destej60y/image/upload/v1778157200/app3_bvenm7.webp",
+        href: "https://play.google.com/store/apps/details?id=com.shhhsilen.cedragdr",
+    },
+    {
+        name: "Speaker Cleaner",
+        imageSrc:
+            "https://res.cloudinary.com/destej60y/image/upload/v1778157200/app4_hjm7vf.webp",
+        href: "https://play.google.com/store/apps/details?id=com.ravadotech.speakercleaner",
+    },
+    {
+        name: "Dynasty Fallen",
+        imageSrc:
+            "https://res.cloudinary.com/destej60y/image/upload/v1778157200/app5_wzox65.webp",
+        href: "https://play.google.com/store/apps/details?id=com.dyn.dyn.astyfa.llen",
+    },
+    {
+        name: "Betmatch",
+        imageSrc:
+            "https://res.cloudinary.com/destej60y/image/upload/v1778157131/app1_dhqure.webp",
+        href: "https://play.google.com/store/apps/details?id=com.egg.polarity.tap.flip",
+    },
+];
+
 export default function GridSection() {
     return (
         <>
@@ -30,13 +63,13 @@ export default function GridSection() {
                         <div className="flex justify-center lg:justify-end">
                             <a
                                 href="https://play.google.com/store/apps/dev?id=5615586096995119277"
-                                className="group block w-full max-w-2xl"
+                                className={`group block w-full max-w-2xl ${styles.playBadgeLink}`}
                                 rel="noopener noreferrer"
                                 target="_blank"
                                 aria-label="Open Ravado Tech developer page on Google Play"
                             >
                                 <div
-                                    className={`relative w-full overflow-hidden rounded-2xl bg-black/5 shadow-2xl ${styles.imageWrap}`}
+                                    className={`relative w-full overflow-hidden rounded-2xl bg-black/5 shadow-2xl ${styles.imageWrap} ${styles.playBadge}`}
                                 >
                                     <Image
                                         src="https://res.cloudinary.com/destej60y/image/upload/v1771346830/Store_Google_Play_Type_Dark_Language_English_1_buber3.svg"
@@ -72,6 +105,54 @@ export default function GridSection() {
                         <span className="underline underline-offset-4">App</span> or{" "}
                         <span className="underline underline-offset-4">Game</span> ?
                     </p>
+                </div>
+            </section>
+
+            <section
+                id="published-apps"
+                className={`relative w-full overflow-hidden py-28 flex items-center justify-center ${styles.sectionNeonGreen}`}
+            >
+                <div
+                    aria-hidden
+                    className={`pointer-events-none absolute inset-0 ${styles.gridOverlay}`}
+                />
+
+                <div className="relative z-10 w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-16">
+                    <div className="mx-auto max-w-4xl text-center">
+                        <h2 className="text-[clamp(2.6rem,7vw,5.5rem)] font-normal leading-[0.95] tracking-tight text-black">
+                            Published Apps & Customers
+                        </h2>
+                        <p className="mt-5 text-[clamp(1.1rem,2vw,1.45rem)] font-semibold leading-relaxed text-black/70">
+                            Real apps already live on Google Play through Ravado Tech.
+                        </p>
+                    </div>
+
+                    <div className={`mt-12 ${styles.appsGrid}`}>
+                        {PUBLISHED_APPS.map((app, index) => (
+                            <a
+                                key={app.href}
+                                href={app.href}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={`${styles.appCard} ${index % 2 === 1 ? styles.appCardOffset : ""}`}
+                                aria-label={`Open ${app.name} on Google Play`}
+                            >
+                                <div className={styles.appImageFrame}>
+                                    <Image
+                                        src={app.imageSrc}
+                                        alt={`${app.name} preview`}
+                                        fill
+                                        sizes="(min-width: 1280px) 220px, (min-width: 640px) 42vw, 78vw"
+                                        className="object-contain p-4"
+                                    />
+                                </div>
+                                <div className={styles.appCardMeta}>
+                                    <span>{app.name}</span>
+                                    <span aria-hidden>↗</span>
+                                </div>
+                            </a>
+                        ))}
+                    </div>
                 </div>
             </section>
 

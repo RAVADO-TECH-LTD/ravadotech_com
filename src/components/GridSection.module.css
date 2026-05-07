@@ -44,3 +44,198 @@
 .imageWrap {
   aspect-ratio: 16 / 10;
 }
+
+.appsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-inline: auto;
+  max-width: 560px;
+}
+
+.appCard {
+  position: relative;
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.68);
+  box-shadow:
+    0 24px 55px rgba(0, 0, 0, 0.14),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.7);
+  transform: translateY(0);
+  transition:
+    box-shadow 260ms ease,
+    transform 260ms ease;
+}
+
+.appCard::before {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  content: "";
+  background: linear-gradient(
+    135deg,
+    rgba(255, 255, 255, 0.5),
+    transparent 42%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 260ms ease;
+}
+
+.appCard:hover,
+.appCard:focus-visible {
+  box-shadow:
+    0 34px 70px rgba(0, 0, 0, 0.2),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.85);
+  transform: translateY(-6px);
+}
+
+.appCard:hover::before,
+.appCard:focus-visible::before {
+  opacity: 1;
+}
+
+.appImageFrame {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.58);
+}
+
+.appImageFrame img {
+  border-radius: 30px;
+  transition: transform 360ms ease;
+}
+
+.appCard:hover .appImageFrame img,
+.appCard:focus-visible .appImageFrame img {
+  transform: scale(1.035);
+}
+
+.appCardMeta {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  padding: 14px 12px;
+  color: #050505;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.appCardMeta span:first-child {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (min-width: 640px) {
+  .appsGrid {
+    gap: 24px;
+    max-width: 760px;
+  }
+
+  .appCardMeta {
+    gap: 14px;
+    padding: 18px 20px;
+    font-size: 1.05rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .appsGrid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    max-width: none;
+  }
+
+  .appCardOffset {
+    margin-top: 40px;
+  }
+}
+
+.playBadgeLink {
+  animation: badgeFloat 4.8s ease-in-out infinite;
+  transform-origin: center;
+}
+
+.playBadge {
+  transition:
+    box-shadow 260ms ease,
+    transform 260ms ease;
+}
+
+.playBadge::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background: linear-gradient(
+    110deg,
+    transparent 28%,
+    rgba(255, 255, 255, 0.22) 46%,
+    transparent 64%
+  );
+  opacity: 0;
+  pointer-events: none;
+  transform: translateX(-120%);
+}
+
+.playBadgeLink:hover .playBadge,
+.playBadgeLink:focus-visible .playBadge {
+  box-shadow:
+    0 28px 60px rgba(0, 0, 0, 0.22),
+    0 0 0 1px rgba(255, 255, 255, 0.2);
+  transform: translateY(-4px);
+}
+
+.playBadgeLink:hover .playBadge::after,
+.playBadgeLink:focus-visible .playBadge::after {
+  animation: badgeSheen 900ms ease-out;
+  opacity: 1;
+}
+
+@keyframes badgeFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes badgeSheen {
+  from {
+    transform: translateX(-120%);
+  }
+
+  to {
+    transform: translateX(120%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .playBadgeLink {
+    animation: none;
+  }
+
+  .appCard,
+  .appCard::before,
+  .appImageFrame img,
+  .playBadge,
+  .playBadge::after {
+    transition: none;
+  }
+
+  .playBadgeLink:hover .playBadge::after,
+  .playBadgeLink:focus-visible .playBadge::after {
+    animation: none;
+  }
+}
