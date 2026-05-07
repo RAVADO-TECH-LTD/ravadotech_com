@@ -1,0 +1,9 @@
+.root {
+  -webkit-touch-callout: none;
+}
+
+.root img {
+  -webkit-user-drag: none;
+  user-drag: none;
+  user-select: none;
+}

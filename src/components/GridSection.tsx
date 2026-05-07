@@ -319,12 +319,14 @@ export default function GridSection() {
                             href={TELEGRAM_CONTACT.href}
                             iconSrc={TELEGRAM_CONTACT.iconSrc}
                             subLabel={TELEGRAM_CONTACT.value}
+                            actionLabel="Message on Telegram"
                         />
                         <CtaButton
                             label={WHATSAPP_CONTACT.label}
                             href={WHATSAPP_CONTACT.href}
                             iconSrc={WHATSAPP_CONTACT.iconSrc}
                             subLabel="Chat on WhatsApp"
+                            actionLabel="Start WhatsApp Chat"
                         />
                     </div>
                 </div>
@@ -338,36 +340,40 @@ function CtaButton({
     label,
     iconSrc,
     subLabel,
+    actionLabel,
 }: {
     href: string;
     label: string;
     iconSrc: string;
     subLabel: string;
+    actionLabel: string;
 }) {
     return (
         <a
             href={href}
             target="_blank"
             rel="noopener noreferrer"
-            className="group flex-1 rounded-2xl bg-white/95 px-6 py-5 text-left shadow-2xl ring-1 ring-black/10 transition-transform hover:-translate-y-0.5 hover:bg-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-offset-4 focus-visible:ring-offset-[#a000ff]"
+            className={`group flex-1 ${styles.ctaCard}`}
         >
-            <div className="flex items-center gap-4">
-                <span className="flex h-14 w-14 items-center justify-center rounded-2xl bg-white shadow-sm ring-1 ring-black/15">
+            <span className={styles.ctaGlow} aria-hidden />
+            <div className="relative z-10 flex items-center gap-4 sm:gap-5">
+                <span className={styles.ctaIconWrap}>
                     <Image
                         src={iconSrc}
                         alt={`${label} icon`}
                         width={40}
                         height={40}
-                        className="h-10 w-10"
+                        className="h-10 w-10 sm:h-11 sm:w-11"
                     />
                 </span>
-                <div className="min-w-0">
-                    <div className="text-lg font-bold text-black truncate">{label}</div>
-                    <div className="text-sm font-semibold text-black/60 truncate">{subLabel}</div>
+                <div className="min-w-0 flex-1">
+                    <div className={styles.ctaEyebrow}>{label}</div>
+                    <div className={styles.ctaAction}>{actionLabel}</div>
+                    <div className={styles.ctaSubLabel}>{subLabel}</div>
                 </div>
-                <div className="ml-auto text-black/40 text-xl font-bold transition-transform group-hover:translate-x-0.5">
+                <span className={styles.ctaArrow} aria-hidden>
                     →
-                </div>
+                </span>
             </div>
         </a>
     );
