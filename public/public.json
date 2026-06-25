@@ -66,5 +66,9 @@
   "com.zibplay.bubble.pop.play" : "https://zibplay.com/game/bubble-pop",
   "com.zibplay.snake.play" : "https://zibplay.com/game/snake",
   "com.zibplay.breakout.play" : "https://zibplay.com/game/breakout",
-  "com.zibplay.pong.play" : "https://zibplay.com/game/pong"
+  "com.zibplay.pong.play" : "https://zibplay.com/game/pong",
+  "com.zibplay.rockpaperscissor.clash" : "https://zibplay.com/game/rock-paper-scissors",
+  "com.zibplay.flappyskydash" : "https://zibplay.com/game/flappy-flyer",
+  "com.zibplay.tileslidepuzzle" : "https://zibplay.com/game/sliding-puzzle",
+  "com.zibplay.colorwordchallenge" : "https://zibplay.com/game/stroop-color"
 }
