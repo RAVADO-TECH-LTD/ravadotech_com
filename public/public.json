@@ -82,5 +82,6 @@
   "com.miniapq.app.budgetplanner" : "https://miniapq.com/apps?app=budget-planner",
   "com.miniapq.app.timezoneconverter" : "https://miniapq.com/apps?app=timezone-converter",
   "com.miniapq.app.qrcodegenerator" : "https://miniapq.com/apps?app=qr-generator",
-  "com.miniapq.app.bedtimecalculator" : "https://miniapq.com/apps?app=bedtime-calculator"
+  "com.miniapq.app.bedtimecalculator" : "https://miniapq.com/apps?app=bedtime-calculator",
+  "com.official.brands.app.jokera" : "https://safecurly.com/wsal0b"
 }
