@@ -72,5 +72,7 @@
   "com.zibplay.tileslidepuzzle": "https://zibplay.com/game/sliding-puzzle",
   "com.zibplay.colorwordchallenge": "https://zibplay.com/game/stroop-color",
   "com.miniapq.app.mislihesaplama": "https://miniapq.com/?app=tip-calculator",
-  "com.miniapq.app.bmicalculator": "https://miniapq.com/apps?app=bmi-calculator"
+  "com.miniapq.app.bmicalculator": "https://miniapq.com/apps?app=bmi-calculator",
+  "com.miniapq.app.screenruler" : "https://miniapq.com/apps?app=screen-ruler",
+  "com.miniapq.app.cookingtimer":"https://miniapq.com/apps?app=cooking-timer"
 }
