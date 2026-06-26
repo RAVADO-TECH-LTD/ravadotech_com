@@ -74,5 +74,13 @@
   "com.miniapq.app.mislihesaplama": "https://miniapq.com/?app=tip-calculator",
   "com.miniapq.app.bmicalculator": "https://miniapq.com/apps?app=bmi-calculator",
   "com.miniapq.app.screenruler" : "https://miniapq.com/apps?app=screen-ruler",
-  "com.miniapq.app.cookingtimer":"https://miniapq.com/apps?app=cooking-timer"
+  "com.miniapq.app.cookingtimer":"https://miniapq.com/apps?app=cooking-timer",
+  "com.miniapq.app.multiplicationtrainer" : "https://miniapq.com/apps?app=multiplication-trainer",
+  "com.miniapq.app.meetingcost" : "https://miniapq.com/apps?app=meeting-cost",
+  "com.miniapq.app.paintcoverage" : "https://miniapq.com/apps?app=paint-coverage",
+  "com.miniapq.app.hiittimer" : "https://miniapq.com/apps?app=hiit-timer",
+  "com.miniapq.app.budgetplanner" : "https://miniapq.com/apps?app=budget-planner",
+  "com.miniapq.app.timezoneconverter" : "https://miniapq.com/apps?app=timezone-converter",
+  "com.miniapq.app.qrcodegenerator" : "https://miniapq.com/apps?app=qr-generator",
+  "com.miniapq.app.bedtimecalculator" : "https://miniapq.com/apps?app=bedtime-calculator"
 }
