@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Lilita_One } from "next/font/google";
+import ExternalLinkHandler from "@/components/ExternalLinkHandler";
 import "./globals.css";
 
 const lilitaOne = Lilita_One({
@@ -25,6 +26,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${lilitaOne.variable} antialiased font-lilita`}>
+        <ExternalLinkHandler />
         {children}
       </body>
     </html>

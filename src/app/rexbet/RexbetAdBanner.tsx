@@ -6,6 +6,7 @@ const adHtml = `<!doctype html>
 <html>
   <head>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <base target="_blank" />
     <style>
       html,
       body {
@@ -32,6 +33,18 @@ const adHtml = `<!doctype html>
         border: 0;
       }
     </style>
+    <script>
+      document.addEventListener("click", function (event) {
+        var link = event.target && event.target.closest ? event.target.closest("a[href]") : null;
+
+        if (!link) {
+          return;
+        }
+
+        link.target = "_blank";
+        link.rel = "noopener noreferrer";
+      }, true);
+    </script>
   </head>
   <body>
     <script type="text/javascript" src="https://js.thrncdn1.com/javascript.php?prefix=EtgF4_wjobVutv7iXV6HvmNd7ZgqdRLk&amp;media=695&amp;campaign=1"></script>
