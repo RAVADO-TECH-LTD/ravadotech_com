@@ -41,8 +41,11 @@ const adHtml = `<!doctype html>
           return;
         }
 
+        event.preventDefault();
+        event.stopPropagation();
         link.target = "_blank";
         link.rel = "noopener noreferrer";
+        parent.postMessage({ type: "external-link", url: link.href }, "*");
       }, true);
     </script>
   </head>
