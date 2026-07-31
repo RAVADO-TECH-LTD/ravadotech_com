@@ -70,7 +70,7 @@ export default function PrivacyPolicyPage() {
                         <li><strong>Device information</strong> — device model, operating system and version, unique device identifiers (e.g. Android Advertising ID, Apple IDFA), language, and time zone.</li>
                         <li><strong>Usage data</strong> — app interaction events, feature usage, session duration, crash reports, and performance diagnostics.</li>
                         <li><strong>Network information</strong> — IP address, mobile carrier, and connection type.</li>
-                        <li><strong>Cookies &amp; similar technologies</strong> — on our websites we may use cookies, pixels, and local storage for analytics and essential functionality. See our <a href="/cookie-policy" className="underline underline-offset-2 hover:text-black transition-colors">Cookie Policy</a> for details.</li>
+                        <li><strong>Website data</strong> — our website is designed not to set first-party tracking or consent cookies.</li>
                     </ul>
 
                     <h3 className="text-base font-bold text-black mt-4">3.3 Information from Third Parties</h3>
@@ -253,7 +253,7 @@ export default function PrivacyPolicyPage() {
                 {/* ── Do Not Track ── */}
                 <Section title="15. &ldquo;Do Not Track&rdquo; Signals">
                     <p>
-                        Some browsers transmit &quot;Do Not Track&quot; (DNT) signals. There is currently no universal standard for how companies should respond to DNT signals. We do not currently respond to DNT signals but honour opt-out preferences you set via our <a href="/cookie-settings" className="underline underline-offset-2 hover:text-black transition-colors">Cookie Settings</a> and device-level advertising controls.
+                        Some browsers transmit &quot;Do Not Track&quot; (DNT) signals. There is currently no universal standard for how companies should respond to DNT signals. We do not currently respond to DNT signals but honour opt-out preferences available through your device-level advertising controls.
                     </p>
                 </Section>
 

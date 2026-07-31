@@ -147,7 +147,6 @@ export default function DeleteMyAccountPage() {
                         <li><a href="/privacy-policy" className="underline underline-offset-2 hover:text-black transition-colors">Privacy Policy</a></li>
                         <li><a href="/terms-of-service" className="underline underline-offset-2 hover:text-black transition-colors">Terms of Service</a></li>
                         <li><a href="/do-not-sell" className="underline underline-offset-2 hover:text-black transition-colors">Do Not Sell My Personal Information</a></li>
-                        <li><a href="/cookie-policy" className="underline underline-offset-2 hover:text-black transition-colors">Cookie Policy</a></li>
                     </ul>
                 </Section>
 

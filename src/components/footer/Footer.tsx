@@ -30,10 +30,8 @@ const LEGAL_LINKS = [
 ];
 
 const PRIVACY_TOOLS_LINKS = [
-    { label: "Cookie Policy", href: "/cookie-policy" },
     { label: "Do Not Sell", href: "/do-not-sell" },
     { label: "Delete My Account", href: "/delete-my-account" },
-    { label: "Cookie Settings", href: "/cookie-settings" },
 ];
 
 const PRIVACY_BAR_LINKS = [

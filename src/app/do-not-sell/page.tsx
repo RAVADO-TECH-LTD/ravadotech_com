@@ -101,7 +101,6 @@ export default function DoNotSellPage() {
                 <Section title="Related Policies">
                     <ul className="list-disc pl-6 space-y-1">
                         <li><a href="/privacy-policy" className="underline underline-offset-2 hover:text-black transition-colors">Privacy Policy</a></li>
-                        <li><a href="/cookie-policy" className="underline underline-offset-2 hover:text-black transition-colors">Cookie Policy</a></li>
                         <li><a href="/advertising-partners" className="underline underline-offset-2 hover:text-black transition-colors">Advertising Partners</a></li>
                         <li><a href="/privacy-request" className="underline underline-offset-2 hover:text-black transition-colors">Privacy Request</a></li>
                     </ul>

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import { Lilita_One } from "next/font/google";
-import KlaroProvider from "@/components/KlaroProvider";
 import "./globals.css";
 
 const lilitaOne = Lilita_One({
@@ -26,7 +25,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${lilitaOne.variable} antialiased font-lilita`}>
-        <KlaroProvider />
         {children}
       </body>
     </html>
